@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{737C19E2-5472-4365-9327-F4B6CB4E8F6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryptographySuccintly</RootNamespace>
+    <AssemblyName>CryptographySuccintly</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Asymmetric Encryption\RSA Encryption\RSA Encryption.csproj">
+      <Project>{1bab2e3c-aa74-45f1-ae9f-aba84952478f}</Project>
+      <Name>RSA Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptographic Random\RandomCryptography\RandomCryptography.csproj">
+      <Project>{bc405d62-3d75-4feb-b02b-fec5698cf778}</Project>
+      <Name>RandomCryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Digital Signature\Digital Signature\Digital Signature.csproj">
+      <Project>{3f9532bb-4cb9-4086-b199-3742965f4af6}</Project>
+      <Name>Digital Signature</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hashing Algorithms\Hashing MD5\Hashing MD5.csproj">
+      <Project>{91170023-d277-4bf6-89eb-6b17eaa01e27}</Project>
+      <Name>Hashing MD5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hashing Algorithms\Hashing Message Authentication Codes\Hashing Message Authentication Codes.csproj">
+      <Project>{bae2c85d-3bd3-43d1-b724-b7b937666298}</Project>
+      <Name>Hashing Message Authentication Codes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hashing Algorithms\Hashing SHA\Hashing SHA.csproj">
+      <Project>{7dd4354a-85a1-473d-b967-4ed814b52fe3}</Project>
+      <Name>Hashing SHA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid Approach\Hybrid Encryption with Added Integrity\Hybrid Encryption with Added Integrity.csproj">
+      <Project>{d7662a0d-e6ae-488b-808b-bf003838ba8e}</Project>
+      <Name>Hybrid Encryption with Added Integrity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid Approach\Hybrid Encryption\Hybrid Encryption.csproj">
+      <Project>{1cfc8ad4-fe38-4963-8161-00a33fd28314}</Project>
+      <Name>Hybrid Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Password Storage\Hash Password With Salt\Hash Password With Salt.csproj">
+      <Project>{7261ce06-9030-4f46-9289-6e4f98c3b1dd}</Project>
+      <Name>Hash Password With Salt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Password Storage\Password Key Derivation\Password Key Derivation.csproj">
+      <Project>{0917f9f6-b12d-4f2d-97bd-4020b3d7ff55}</Project>
+      <Name>Password Key Derivation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Symmetric Encryption\Advanced Encryption Standard\Advanced Encryption Standard.csproj">
+      <Project>{bea9124a-88d1-4ec6-8060-c3e22fb7bb32}</Project>
+      <Name>Advanced Encryption Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Symmetric Encryption\Data Encryption Standard\Data Encryption Standard.csproj">
+      <Project>{2c2d7a9a-02d3-458b-a364-7164acf7d8a2}</Project>
+      <Name>Data Encryption Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Symmetric Encryption\TripleDES\TripleDES.csproj">
+      <Project>{b475dd40-2136-468e-be5f-9efed751f96c}</Project>
+      <Name>TripleDES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

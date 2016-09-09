@@ -1,0 +1,11 @@
+﻿<Window x:Class="Hashing_MD5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hashing MD5" Height="214.179" Width="525">
+    <Grid>
+        <TextBox x:Name="txtMessage" TextWrapping="Wrap" Text="TextBox" Margin="10,10,10,65" AcceptsReturn="True"/>
+        <Button x:Name="btnHash" Content="MD5 Hash" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="0,0,0,38" Click="btnHash_Click" Focusable="False"/>
+        <TextBox x:Name="txtDigest" Height="23" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="0,0,0,10" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="300" IsReadOnly="True"/>
+
+    </Grid>
+</Window>

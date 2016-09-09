@@ -1,0 +1,13 @@
+﻿<Window x:Class="RandomCryptography.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Random Cryptography" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="edit" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Random" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBlock x:Name="text" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button x:Name="btnRandom" Content="Button" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="75" Click="btnRandom_Click"/>
+        <TextBox x:Name="txtRandom" HorizontalAlignment="Left" Height="23" Margin="10,138,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="400"/>
+
+    </Grid>
+</Window>
